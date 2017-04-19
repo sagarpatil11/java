@@ -1,0 +1,49 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+public class Gambler 
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		int numoftimes,bets,wins;
+		int stake,goal;
+		Scanner scanner=new Scanner(System.in);
+		
+		System.out.println("Enter the number of times you want to bet:");
+		numoftimes=scanner.nextInt();
+		
+		System.out.println("Enter the value of Stake you have:");
+		stake=scanner.nextInt();
+		
+		System.out.println("Enter your goal:");
+		goal=scanner.nextInt();
+		
+		bets=0;
+		wins=0;
+		
+
+		
+		for(int i=0;i<numoftimes;i++)
+		{
+			int cash=stake;
+			while(cash>0 && cash<goal)
+			{
+				bets++;
+				if(Math.random()<0.5)
+					cash++;
+				else
+					cash--;
+			}
+			if(cash==goal)
+				wins++;
+		}
+		double pwin=(double)wins/numoftimes*100;
+		System.out.println("Number of wins are "+wins);
+		System.out.println("Number of win percentage is "+pwin);
+
+	}
+
+}

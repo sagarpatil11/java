@@ -1,0 +1,23 @@
+package com.controller;
+
+import java.util.Scanner;
+
+public class AddressBookController //implements addressbookcontoller 
+{
+
+	Scanner s=new Scanner(System.in);
+	public void createAddressBook() 
+	{
+		// TODO Auto-generated method stub
+		System.out.println("Enter the name of Address book you want create: ");
+		String addbookname=s.next();
+		
+	}
+
+	public void addPerson() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}

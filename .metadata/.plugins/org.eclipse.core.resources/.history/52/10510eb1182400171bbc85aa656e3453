@@ -1,0 +1,38 @@
+package com.bridgelabz.programs;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Palendrome {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Deque deque=new LinkedList<>();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String string=scanner.next();
+		
+		for(int i=0;i<string.length();i++)
+		{
+			deque.add(string.charAt(i));
+		}
+		
+		String reversestr="";
+		for(int i=0;i<deque.size();i++)
+		{
+			reversestr=reversestr+deque.getLast();
+		}
+		
+		if(string.equals(reversestr))
+		{
+			System.out.println("The string is Palendrome");
+		}
+		else
+		{
+			System.out.println("The string is not Palindrome");
+		}
+	}
+
+}

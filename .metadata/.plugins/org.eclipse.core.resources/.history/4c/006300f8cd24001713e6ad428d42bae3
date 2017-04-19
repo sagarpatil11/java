@@ -1,0 +1,36 @@
+package com.tester;
+
+import java.util.Scanner;
+
+import com.controller.AddressBookController;
+
+public class AddressBookMain 
+{
+	
+	public static void main(String[] args) 
+	{
+		
+		// TODO Auto-generated method stub
+		System.out.println("hi");
+		int ch;
+		Scanner s = new Scanner(System.in);
+		System.out.println("hi1");
+		AddressBookController controller=new AddressBookController();
+		System.out.println(controller);
+		System.out.println("hi2");
+			/*System.out.println("......Menu.......");
+			System.out.println("1.Create Address Book");
+			System.out.println("2.Add person");
+			System.out.println("Enter your choice:");
+			ch=s.nextInt();
+			switch(ch)
+			{
+				case 1:*/controller.createAddressBook();
+						/*break;
+				case 2:*///controller.addPerson();
+						/*break;
+			}
+		*/
+	}
+
+}

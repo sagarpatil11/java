@@ -1,0 +1,26 @@
+package com.bridgelabz.programs;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class UnorderedList {
+
+	public static void main(String[] args) throws IOException
+	{
+		// TODO Auto-generated method stub
+Scanner scanner=new Scanner(System.in);
+		
+		BufferedReader bufferedreader=new BufferedReader(new FileReader("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs/file1.txt"));
+	   
+		String string;
+	   
+		string=bufferedreader.readLine();
+		
+		String[] array=string.split(",");
+		
+	}
+
+}

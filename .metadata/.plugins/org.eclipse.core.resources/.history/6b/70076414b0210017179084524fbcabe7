@@ -1,0 +1,15 @@
+package com.bridgelabz.utility;
+
+import java.util.Scanner;
+
+public class Utility 
+{
+	public int inputNumber()
+	{
+		int number;
+		Scanner scanner=new Scanner(System.in);
+		number=scanner.nextInt();
+		return number;
+		
+	}
+}

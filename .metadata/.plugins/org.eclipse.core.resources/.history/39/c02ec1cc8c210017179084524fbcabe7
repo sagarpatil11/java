@@ -1,0 +1,40 @@
+package com.bridgelabz;
+
+import java.util.*;
+import java.util.Scanner;
+public class Anagram {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		String str1,str2;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter String 1:");
+		str1=s.next();
+		System.out.println("Enter String 2:");
+		str2=s.next();
+		
+		if(str1.length() != str2.length())
+		{
+			System.out.println("Strings are not Anagram");
+		}
+		else
+		{
+			str1=str1.trim();
+			char[] s1=str1.toLowerCase().toCharArray();
+			str2=str2.trim();
+			char[] s2=str2.toLowerCase().toCharArray();
+			
+			if(s1.equals(s2))
+			{
+				System.out.println("String 1 and Srting 2 are Anagram");
+			}
+			else
+			{
+				System.out.println("String 1 and Srting 2 are not Anagram");
+			}
+		}
+		
+	}
+
+}

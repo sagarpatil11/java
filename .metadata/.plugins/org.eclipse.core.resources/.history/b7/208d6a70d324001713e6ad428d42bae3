@@ -1,0 +1,19 @@
+package com.tester;
+
+import java.util.Scanner;
+
+import com.controller.AddressBookController;
+
+public class AddressBookMain 
+{
+	
+	public static void main(String[] args) 
+	{
+		AddressBookController addressbookcontroller=new AddressBookController();
+		addressbookcontroller.createAddressBook();
+		addressbookcontroller.addPerson();
+
+			
+	}
+
+}

@@ -1,0 +1,53 @@
+package com.bridgelabz.programs;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import java.util.Iterator;
+
+public class UnorderedList {
+
+	public static void main(String[] args) throws IOException
+	{
+		// TODO Auto-generated method stub
+Scanner scanner=new Scanner(System.in);
+		
+		BufferedReader bufferedreader=new BufferedReader(new FileReader("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs/file1.txt"));
+	   
+		String string;
+	   
+		string=bufferedreader.readLine();
+		
+		String[] array=string.split(",");
+		
+		LinkedList<String> list=new LinkedList(Arrays.asList(array));
+		
+		System.out.println("Enter the word you want to search");
+		String word=scanner.next();
+		
+		Boolean result=list.contains(word);
+		
+		if(result)
+		{
+			System.out.println("found");
+			list.remove(word);
+		}
+		else
+		{
+			System.out.println("Not found");
+			list.add(word);
+		}
+		
+		Iterator<String> itr=list.iterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}
+	}
+
+}

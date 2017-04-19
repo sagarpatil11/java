@@ -1,0 +1,23 @@
+package com.bridgelabz.utility;
+
+import java.util.Scanner;
+
+public class Utility 
+{
+	
+	//take input of integer value using Scanner class and return integer 
+	public int inputNumber()
+	{
+		int number;
+		Scanner scanner=new Scanner(System.in);
+		number=scanner.nextInt();
+		return number;
+		
+	}
+	
+	public int[][] input2DArray(int row,int col)
+	{
+		int array[][]=new int[row][col];
+		return array;
+	}
+}

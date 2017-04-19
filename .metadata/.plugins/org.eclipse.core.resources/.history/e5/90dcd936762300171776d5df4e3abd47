@@ -1,0 +1,71 @@
+package com.bridgelabz.programs;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import java.util.Iterator;
+
+public class UnorderedList {
+
+	public static void main(String[] args) throws IOException
+	{
+		// TODO Auto-generated method stub
+Scanner scanner=new Scanner(System.in);
+		
+		BufferedReader bufferedreader=new BufferedReader(new FileReader("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs/file1.txt"));
+	   
+		String str;
+	   
+		str=bufferedreader.readLine();
+		
+		String[] array=str.split(" ");
+		
+		LinkedList<String> list=new LinkedList(Arrays.asList(array));
+		
+		System.out.println("Enter the word you want to search");
+		String word=scanner.next();
+		
+		Boolean result=list.contains(word);
+		
+		if(result)
+		{
+			System.out.println("Word found");
+			list.remove(word);
+			System.out.println("Word Successfully removed from the LinkedList");
+		}
+		else
+		{
+			System.out.println("Word Not found");
+			list.add(word);
+			System.out.println("Word Successfully added to the LinkedList");
+			
+		}
+		
+		BufferedWriter bufferedwriter=new BufferedWriter(new FileWriter("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs/file1.txt"));
+		String[] newarray =list.toArray(new String[list.size()]);
+		for(int i=0;i<newarray.length;i++)
+		{
+			System.out.println(newarray[i]);
+		}
+
+		String s;
+		s=String.join("" , newarray);
+		
+		bufferedwriter.write(s);
+		
+		
+		Iterator<String> itr=list.iterator();
+		while(itr.hasNext())
+		{
+			System.out.print(itr.next()+" ");
+		}
+	}
+
+}

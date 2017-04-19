@@ -1,0 +1,39 @@
+package com.bridgelabz.programs;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class OrderedList {
+
+	public static void main(String[] args) throws IOException 
+	{
+		// TODO Auto-generated method stub
+		Scanner scanner=new Scanner(System.in);
+		File file=new File("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs/orderedlist.txt");
+		FileInputStream fileinputstream=new FileInputStream(file);
+		
+		int content;
+		String string="";
+		while((content=fileinputstream.read())!=-1)
+		{
+			string=string+content;
+		}
+		
+		String[] array=string.split("\\s");
+		
+		int[] intarray=new int[array.length];
+		for(int i=0;i<array.length;i++)
+		{
+			
+		}
+		
+		
+	
+		
+	}
+
+}

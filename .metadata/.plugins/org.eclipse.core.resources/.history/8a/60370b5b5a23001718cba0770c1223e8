@@ -1,0 +1,45 @@
+package com.bridgelabz.programs;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
+
+public class BinarySearch {
+
+	public static void main(String[] args) throws IOException 
+	{
+		// TODO Auto-generated method stub
+		Utility utility=new Utility();
+		Scanner scanner=new Scanner(System.in);
+		
+		BufferedReader bufferedreader=new BufferedReader(new FileReader("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs"));
+	   // String array[];
+	    String string;
+	   
+		while((string=bufferedreader.readLine())!=null)
+		{
+			
+		}
+		String[] array=string.split(",");
+		Arrays.sort(array);
+		System.out.println("Enter the word you want to search:");
+		String search=scanner.nextLine();
+		
+		int result=utility.binarySearchString(array,search);
+		
+		if(result>-1)
+		{
+			System.out.println("The word "+search+" is found");
+		}
+		else
+		{
+			System.out.println("The word "+search+" is not found");
+		}
+	}
+
+}

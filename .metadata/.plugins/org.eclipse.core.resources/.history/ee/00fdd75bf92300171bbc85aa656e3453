@@ -1,0 +1,97 @@
+package com.bridgelabz.programs;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class OrderedList {
+
+	public static void main(String[] args) throws IOException 
+	{
+		// TODO Auto-generated method stub
+		Scanner scanner=new Scanner(System.in);
+		File file=new File("/home/bridgeit/workspace/Java Programs/src/com/bridgelabz/programs/orderedlist.txt");
+	/*	FileInputStream fileinputstream=new FileInputStream(file);
+		*/
+		BufferedReader br = new BufferedReader(new FileReader(file));
+
+		int content;
+		String string=null;
+		String[] strarray=null;
+		while((string=br.readLine())!=null)
+		{
+			strarray=string.split(" ");
+		}
+		//System.out.println(string);
+		
+		//String[] strarray=string.split("\\s");
+		
+		for(int i=0;i<strarray.length;i++)
+			System.out.print(strarray[i]);
+		
+		int[] intarray=new int[strarray.length];
+		for(int i=0;i<intarray.length;i++)
+		{
+			intarray[i]=Integer.parseInt(strarray[i]);
+		}
+		
+		LinkedList<Integer> list=new LinkedList<>();
+		for(int i=0;i<intarray.length;i++)
+		{
+			list.add(intarray[i]);
+		}
+		Collections.sort(list);
+
+		Iterator<Integer> itr=list.iterator();
+		while(itr.hasNext())
+		{
+			System.out.print(itr.next()+" ");
+		}
+		
+		
+		System.out.println("Enter the word you want to search");
+		int intvalue=scanner.nextInt();
+		
+		FileWriter filewriter=new FileWriter(file);
+		
+		if((list.contains(intvalue)))
+		{
+			System.out.println("Word found");
+			list.remove(intvalue);
+			Collections.sort(list);
+			for(int i=0;i<list.size();i++)
+			{
+				filewriter.write(list.get(i)+" ");
+				filewriter.flush();
+			}
+			
+		}
+		else
+		{
+			System.out.println("Word not found");
+			list.add(intvalue);
+			Collections.sort(list);
+			for(int i=0;i<list.size();i++)
+			{
+				filewriter.write(list.get(i)+" ");
+				filewriter.flush();
+			}
+		}
+		
+	/*	Iterator<Integer> itr=list.iterator();
+		while(itr.hasNext())
+		{
+			System.out.print(itr.next()+" ");
+		}
+		*/
+	}
+
+}
