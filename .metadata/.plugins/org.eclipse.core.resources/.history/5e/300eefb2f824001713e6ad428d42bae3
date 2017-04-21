@@ -1,0 +1,10 @@
+package com.service;
+
+public interface addressbookservice 
+{
+	public void createAddrBook();
+	public void addNewPerson();
+	public void deletePerson();
+	public void searchPerson();
+	
+}

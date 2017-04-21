@@ -1,7 +1,0 @@
-package com.controller;
-
-public interface addressbookcontoller 
-{
-	public void createAddressBook();
-	public void addPerson();
-}

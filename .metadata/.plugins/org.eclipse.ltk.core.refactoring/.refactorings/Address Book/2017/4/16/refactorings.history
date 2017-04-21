@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Address Book/src/com/tester/addressbookdata&apos; to &apos;addressbookdata.ser&apos;" description="Rename resource &apos;addressbookdata&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/tester/addressbookdata" name="addressbookdata.ser" stamp="1492754691437" updateReferences="true"/>
+</session>

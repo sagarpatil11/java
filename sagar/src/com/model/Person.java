@@ -1,0 +1,121 @@
+package com.model;
+
+import java.io.Serializable;
+import java.util.Comparator;
+
+public class Person implements Serializable
+{
+	String firstname,lastname,address,city,state;
+	long mobno;
+	int zipcode;
+	
+	/*public Person(String firstname, String lastname, String address,String city,String state, long mobno, int zipcode) 
+	{
+		super();
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.address = address;
+		this.city=city;
+		this.state=state;
+		this.mobno = mobno;
+		this.zipcode = zipcode;
+	}*/
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public long getMobno() {
+		return mobno;
+	}
+
+	public void setMobno(long mobno) {
+		this.mobno = mobno;
+	}
+
+	public int getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(int zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	@Override
+	public String toString() {
+		return "\nPerson [firstname=" + firstname + ", lastname=" + lastname + ", address=" + address + ", city=" + city
+				+ ", state=" + state + ", mobno=" + mobno + ", zipcode=" + zipcode + "]";
+	}
+	
+	public static Comparator<Person> comparelastname=new Comparator<Person>() 
+	{
+		
+		@Override
+		public int compare(Person person1, Person person2) {
+			// TODO Auto-generated method stub
+			String lastname1=person1.getLastname().toLowerCase();
+			String lastname2=person2.getLastname().toLowerCase();
+			
+			return lastname1.compareTo(lastname2);
+		}
+	};
+	
+	public static Comparator<Person> comparezipcode=new Comparator<Person>() 
+	{
+		
+		@Override
+		public int compare(Person person1, Person person2) {
+			// TODO Auto-generated method stub
+			int zip1=person1.getZipcode();
+			int zip2=person2.getZipcode();
+			if(zip1==zip2)
+			return (0);
+			else if(zip1<zip2)
+				return -1;
+			else
+				return 1;
+			
+		}
+	};
+
+
+
+	
+
+}

@@ -1,0 +1,47 @@
+package com.controller;
+
+import java.util.Scanner;
+
+import com.service.AddressBookService;
+import com.service.addressbookservice;
+
+public class AddressBookController
+{
+
+
+	AddressBookService service=new AddressBookService();
+	public void createAddressBook() 
+	{
+		// TODO Auto-generated method stub
+	
+		service.createAddrBook();
+		
+	}
+
+	public void addPerson() 
+	{
+		// TODO Auto-generated method stub
+		service.addNewPerson();
+	}
+	
+	public void deletePerson()
+	{
+		service.deletePerson();
+	}
+	
+	public void searchPerson()
+	{
+		service.searchPerson();
+	}
+	
+	public void editPerson
+	{
+		service.editPerson();
+	}
+	
+	public void sortByLastName()
+	{
+		service.sortByLastName();
+	}
+
+}

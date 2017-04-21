@@ -1,0 +1,46 @@
+package com.tester;
+
+import java.util.Scanner;
+
+import com.controller.AddressBookController;
+
+public class AddressBookMain 
+{
+	
+	public static void main(String[] args) 
+	{
+		AddressBookController addressbookcontroller=new AddressBookController();
+		Scanner scanner=new Scanner(System.in);
+		while(true)
+		{
+			System.out.println(".......MENU.........");
+			System.out.println("1.Create Address Book");
+			System.out.println("2.Add Person");
+			System.out.println("3.Delete Person");
+			System.out.println("4.Search Person");
+			System.out.println("5.Sort by Last Name Person");
+			System.out.println("6.Exit");
+			System.out.println("Enter your choice");
+			int choice=scanner.nextInt();
+		
+			switch(choice)
+			{
+			case 1:
+					addressbookcontroller.createAddressBook();
+					break;
+			case 2:
+					addressbookcontroller.addPerson();
+					break;
+			case 3:
+					addressbookcontroller.deletePerson();
+					break;
+			case 4:
+					addressbookcontroller.searchPerson();
+					break;
+			case 5:System.exit(0);
+			}
+		}
+			
+	}
+
+}

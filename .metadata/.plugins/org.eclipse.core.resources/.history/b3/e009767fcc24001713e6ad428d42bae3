@@ -1,7 +1,0 @@
-package com.service;
-
-public interface addressbookservice 
-{
-//	public void createAddrBook();
-	public void addNewPerson();
-}
